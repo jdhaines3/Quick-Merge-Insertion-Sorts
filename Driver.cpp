@@ -114,6 +114,7 @@ int main()
 ////----Fill Arrays----//// 
 void fillArrays(int a[], int b[], int c[], int d[])
 {
+	int i;
 	
 	//fill first array of 100
 	for (i = 0; i < 100; i++)
