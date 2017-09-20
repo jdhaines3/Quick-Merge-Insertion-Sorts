@@ -209,24 +209,24 @@ void runSort (int a[], int b[], int c[], int d[], int choice)
 		QuickSort * quiSortC = new QuickSort();
 		QuickSort * quiSortD = new QuickSort();
 		
-		insSortA->sortArray(a);
-		insSortB->sortArray(b);
-		insSortC->sortArray(c);
-		insSortD->sortArray(d);
+		quiSortA->quickSrt(a);
+		quiSortB->quickSrt(b);
+		quiSortC->quickSrt(c);
+		quiSortD->quickSrt(d);
 		
-		insSortA->printArray(a);
-		insSortA->timeAndSteps(100);
+		quiSortA->printArray(a);
+		quiSortA->timeAndSteps(100);
 		
-		insSortB->printArray(b);
-		insSortB->timeAndSteps(1000);
+		quiSortB->printArray(b);
+		quiSortB->timeAndSteps(1000);
 		
-		insSortC->timeAndSteps(5000);
-		insSortD->timeAndSteps(10000);
+		quiSortC->timeAndSteps(5000);
+		quiSortD->timeAndSteps(10000);
 		
-		delete insSortA;
-		delete insSortB;
-		delete insSortC;
-		delete insSortD;
+		delete quiSortA;
+		delete quiSortB;
+		delete quiSortC;
+		delete quiSortD;
 	}
 	else
 	{

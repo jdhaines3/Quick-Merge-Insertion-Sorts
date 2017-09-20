@@ -114,6 +114,12 @@ void QuickSort::quickSrt(int numb[], int leftPos, int rightPos)
 	return;
 }
 
+void QuickSort::swap(int *i, int *j)
+{
+	int temp = *i;
+	*i = *j;
+	*j = temp;
+}
 
 ///---Print Array Method---///
 void QuickSort::printArray(int numb[])
