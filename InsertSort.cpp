@@ -61,13 +61,16 @@ void InsertSort::printArray(int numb[])
 {
 	std::string stringArray;
 	
-	for (auto i : numb)
+	int size = (sizeof(numb)/sizeof(numb[0]));
+	int i;
+	
+	for (i = 0; i < size; i++)
 	{
 		stringVal = std::to_string(i);
 		stringArray = stringArray + stringVal + ", ";
 	}
 	
-	std::string completeArray = stringArray.substr (0, stringArray.length() - 2);
+	std::string completeArray = stringArray.substr(0, stringArray.length() - 2);
 	std::cout << "Sorted Array: [" + completeArray + "]" <<std::endl;
 	
 	return;
@@ -80,11 +83,17 @@ void InsertSort::timeAndSteps(int elements)
 	float diff = ((float)endTime - (float)startTime);
 	
 	//convert clock time to seconds
-	float timeSeconds = diff / CLOCKS_PER_SECOND;
+	float timeSeconds = diff / CLOCKS_PER_SEC;
+	
+	std::string timSec = std::to_string(timeSeconds);
+	
+	std::string elem = std::to_string(elements);
+	
+	std::string steps = std::to_string(stepCount);
 	
 	//Print out steps and clock time
-	std::cout << "Number of steps for array of " + elements + " elements: " + stepCount << std::endl;
-	std::cout << "Computer processing time for Insertion Sort of " + elements + " elements: " + timeSeconds + " seconds" << std::endl;
+	std::cout << "Number of steps for array of " + elem + " elements: " + steps << std::endl;
+	std::cout << "Computer processing time for Insertion Sort of " + elem + " elements: " + timSec + " seconds" << std::endl;
 	
 	return;
 }
