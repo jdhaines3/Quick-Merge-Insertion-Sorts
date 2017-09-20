@@ -18,9 +18,7 @@
 #include <stdlib.h>
 
 //function prototypes
-void runInsert(int []);
-void runMerge (int []);
-void runQuick (int []);
+void runSort (int [], int [], int [], int [], int); 
 void fillArrays (int [], int [], int [], int []);
 
 ////----Main----////
@@ -33,11 +31,11 @@ int main()
 	int d[10000];
 	
 	//call srand to seed random
-	srand(time(0);
+	srand(time(0));
 	
 	//loop bool and input variables
 	int menuOne = 0;
-	std::string inputOne;
+	std::string inputOne = "";
 	
 	//intro menu 
 	while (menuOne == 0)
@@ -51,7 +49,7 @@ int main()
 		if (inputOne == "1")
 		{
 			//second loop bool and input variables
-			int inputTwo;
+			std::string inputTwo = "";
 			int menuTwo = 0;
 			
 			//second menu listing sorts
