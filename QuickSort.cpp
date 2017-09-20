@@ -44,7 +44,7 @@ void QuickSort::quickSrt(int numb[], int leftPos, int rightPos)
 			stepCount = stepCount + 1;
 		}
 	
-		swap(&numb[midPos], &numb[rightPos - 1];
+		swap(&numb[midPos], &numb[rightPos - 1]);
 		stepCount = stepCount + 1;
 		
 		int pivot = numb[rightPos - 1];
@@ -74,7 +74,7 @@ void QuickSort::quickSrt(int numb[], int leftPos, int rightPos)
 			}
 		}
 		
-		swap(&numb[i], &numb[pivot];
+		swap(&numb[i], &numb[pivot]);
 		stepCount = stepCount + 1;
 		
 		
