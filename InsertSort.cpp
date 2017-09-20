@@ -66,7 +66,7 @@ void InsertSort::printArray(int numb[])
 	
 	for (i = 0; i < size; i++)
 	{
-		stringVal = std::to_string(i);
+		std::string stringVal = std::to_string(i);
 		stringArray = stringArray + stringVal + ", ";
 	}
 	
