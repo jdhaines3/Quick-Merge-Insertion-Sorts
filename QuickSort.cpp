@@ -11,10 +11,11 @@
 #include <iostream>
 #include <time.h>
 #include <string>
+#include <sstream>
 
 void QuickSort::quickSrt(int numb[], int leftPos, int rightPos)
 {
-	if (startTime == NULL)
+	if (!startTime)
 	{
 		startTime = clock();
 	}
@@ -106,7 +107,7 @@ void QuickSort::quickSrt(int numb[], int leftPos, int rightPos)
 		}
 	}
 	
-	if (endTime == NULL)
+	if (!endTime)
 	{
 		endTime = clock();
 	}

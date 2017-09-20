@@ -11,6 +11,7 @@
 #include <iostream>
 #include <time.h>
 #include <string>
+#include <sstream>
 
 void MergeSort::merge(int numb[], int leftPos, int middlePos, int rightPos)
 {
@@ -78,7 +79,7 @@ void MergeSort::mergeSrt(int numb[], int l, int r)
 	//declare middle position variable
 	int m;
 	
-	if (startTime == NULL)
+	if (!startTime)
 	{
 		startTime = clock();
 	}
@@ -100,7 +101,7 @@ void MergeSort::mergeSrt(int numb[], int l, int r)
 		merge(numb, l, m, r);
 	}
 	
-	if (endTime == NULL)
+	if (!endTime)
 	{
 		endTime = clock();
 	}
