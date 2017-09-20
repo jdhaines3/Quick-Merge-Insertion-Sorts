@@ -6,7 +6,7 @@
 */
 
 //includes
-#include "InsertSort.h"
+#include "MergeSort.h"
 #include <stdlib.h>
 #include <iostream>
 #include <time.h>
