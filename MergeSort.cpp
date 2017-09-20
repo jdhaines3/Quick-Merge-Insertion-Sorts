@@ -64,7 +64,7 @@ void MergeSort::merge(int numb[], int leftPos, int middlePos, int rightPos)
 	}
 	
 	//put back into numb array from temp array
-	for (i = leftPos; i <= rightPos; i++)
+	for (int i = leftPos; i <= rightPos; i++)
 	{
 		numb[i] = temp[i - leftPos];
 		stepCount = stepCount + 1;
@@ -94,7 +94,7 @@ void MergeSort::mergeSrt(int numb[], int l, int r)
 		mergeSrt (numb, l, m);
 		stepCount = stepCount + 1;
 		
-		mergeSrt (numb, m + 1; r);
+		mergeSrt (numb, m + 1, r);
 		stepCount = stepCount + 1;
 		
 		//once splitting done, merge!
