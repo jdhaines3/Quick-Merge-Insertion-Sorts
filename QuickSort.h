@@ -32,7 +32,7 @@ class QuickSort
 		void swap (int* i, int* j);
 		
 		//--Quick Sort--//
-		int quickSrt(int [], int, int);
+		void quickSrt(int [], int, int);
 		
 		//--Print Array--//
 		void printArray(int []);
