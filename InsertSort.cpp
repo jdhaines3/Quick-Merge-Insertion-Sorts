@@ -11,6 +11,7 @@
 #include <iostream>
 #include <time.h>
 #include <string>
+#include <sstream>
 
 ///---Insertion Sort---///
 void InsertSort::sortArray(int numb[])
@@ -64,14 +65,20 @@ void InsertSort::printArray(int numb[])
 	int size = (sizeof(numb)/sizeof(numb[0]));
 	int i;
 	
+	std::cout << "Sorted array: [" << std::flush;
+	
 	for (i = 0; i < size; i++)
 	{
-		std::string stringVal = std::to_string(i);
-		stringArray = stringArray + stringVal + ", ";
+		std::cout << numb[i] << std::flush;
+		if (i != size - 1)
+		{
+			std::cout << ", " << std::flush;
+		}
+		else
+		{
+			std::cout << "]\n" << std::endl;
+		}
 	}
-	
-	std::string completeArray = stringArray.substr(0, stringArray.length() - 2);
-	std::cout << "Sorted Array: [" + completeArray + "]" <<std::endl;
 	
 	return;
 }
@@ -85,11 +92,23 @@ void InsertSort::timeAndSteps(int elements)
 	//convert clock time to seconds
 	float timeSeconds = diff / CLOCKS_PER_SEC;
 	
-	std::string timSec = std::to_string(timeSeconds);
+	std::stringstream ss;
 	
-	std::string elem = std::to_string(elements);
+	ss << timeSeconds;
+	std::string timSec = ss.str();
 	
-	std::string steps = std::to_string(stepCount);
+	ss.clear();
+	ss.str("");
+	
+	ss << elements;
+	std::string elem = ss.str();
+	
+	ss.clear();
+	ss.str("");
+	
+	ss << stepCount;
+	std::string steps = ss.str();
+	
 	
 	//Print out steps and clock time
 	std::cout << "Number of steps for array of " + elem + " elements: " + steps << std::endl;
